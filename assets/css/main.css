@@ -1,0 +1,116 @@
+body{
+  color: #24292E;
+}
+/* //typography */
+.tx-subdued{
+  color: rgba(110, 132, 163, 1);
+}
+.table{
+  color: #24292E!important;
+}
+.tx-blackk{
+  color: #12263F;
+}
+.login-main{
+  background: linear-gradient(116.45deg, rgba(0, 0, 0, 0.0639) 3.28%, rgba(0, 0, 0, 0.5396) 66.61%),url(../img/login-bg.png);
+  background-size: cover;
+  height: 100vh;
+}
+.logo-grey{
+  color: #C4C4C4;
+}
+.dark-grey{
+  color: #909090;
+}
+.tx-grey{
+  color: #737F8D;
+}
+.control-height{
+  height: 90vh;
+}
+.bg-black{
+  background-color: #000!important;
+}
+.bg-secondary{
+  background-color:rgba(233, 237, 243, 1) ;
+}
+.image-box{
+  background: rgba(243, 244, 246, 1);
+  height: 50%;
+  border-radius: 5px;
+}
+
+.bg-yellow-light{
+  background-color: rgba(251, 176, 55, 1);
+}
+.bg-orange-light{
+background-color: rgba(255, 220, 163, 1);
+}
+.bg-brownish{
+  background-color: rgba(184, 113, 0, 1);
+}
+.brand tr th{
+  font-weight: 700!important;
+}
+.footer-gray{
+  background-color: rgba(249, 250, 252, 1)!important;
+}
+.display.dataTable{
+  border: none;
+}
+.display th, .display td{
+  border-bottom: none!important;
+}
+.table{
+  width:100%!important;
+}
+.table-head{
+  background-color: #F9FAFC!important;
+}
+table.dataTable.display tr td{
+  /* border-top: 0 !important; */
+}
+table.dataTable.no-footer{
+  border-bottom: none;
+}
+table.dataTable thead .sorting::after{
+  content: "\25BC"!important;
+  color: #D2DDEC;
+}
+table.dataTable thead .sorting::before{
+  content: "\25B2"!important;
+  color: #D2DDEC;
+}
+table.dataTable thead .sorting_asc::after{
+  content: "\25B2"!important;
+  color: #D2DDEC;
+}
+.display tr th, .display tr td{
+font-size: 12px!important;
+}
+.display tr th{
+  font-weight: 600!important;
+}
+.nav-link.tab.active{
+  color: #000!important;
+  font-weight: 700!important;
+  }
+  .nav-link.active.bg{
+    background-color: #DB4C3F!important;
+    font-weight: 700!important;
+  }
+  .bg-green-50{
+    background-color: #E3FCEF;
+  }
+  .tx-green-500{
+    color: #006644;
+  }
+  .bg-red-50{
+    background-color: #FFECEC;
+  }
+  .tx-red-500{
+    color: #AC0B09;
+  }
+  .nav-line .nav-link{
+    padding: 6px 15px!important;
+  }

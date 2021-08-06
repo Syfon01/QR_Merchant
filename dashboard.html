@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>QR Manager</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed tx-center">
+      <div class="aside-header aside-top bg-black">
+        <a href="./index.html" class="aside-logo d-inlineblock tx-white tx-center tx-20">QRManager</a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body pd-0">
+        <div class="aside-loggedin bg-secondary pd-x-25 pd-y-10">
+          <div class="d-flex align-items-center justify-content-start">
+            <div class="avatar ht-40 wd-40"><img src="..." class="rounded-circle" alt=""></div>
+            <div class="aside-loggedin-user mg-l-10">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <p class="tx-bold mg-b-0 tx-13">Peter Madukuve</p>
+                <div>
+                <i data-feather="chevron-down" class="ml-2"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 tx-subdue tx-left">Merchant</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside pd-x-25">
+          <li class="nav-item active p-14"><a href="./index.html" class="nav-link active text-gray-700"><i data-feather="pie-chart"></i><span>Dashboard</span></a></li>
+          <li class="nav-item p-14"><a href="./qr-code.html" class="nav-link text-gray-700"><i data-feather="grid"></i><span>QR Codes</span> </a></li>
+          <li class="nav-item p-14"><a href="./history.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Transaction History</span></a></li>
+          <li class="nav-item p-14"><a href="./user-activities" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>User Activity</span></a></li>
+          <li class="nav-item p-14"><a href="./location.html" class="nav-link text-gray-700"><i data-feather="map-pin"></i> <span>Business Name & Locations</span></a></li>
+          <li class="nav-item p-14"><a href="./logout.html" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Logout</span></a></li>
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Dashboard</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+
+          <p class="tx-32 tx-bold tx-blackk">Dashboard</p>
+
+          <div class="row">
+            <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <div class="d-flex">
+                          <span class="image-box pd-10 mg-r-10">
+                            <img src="./assets/img/section.png" class="img-fluid" alt="" srcset="">
+                          </span>
+                        <p class="tx-14 mb-0 tx-placeholder tx-medium d-flex align-items-center">Active QRs</p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <p class="tx-32 mb-0 tx-bold">3</p>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="">
+                      <div class="d-flex">
+                          <span class="image-box pd-10 mg-r-10">
+                            <img src="./assets/img/section.png" class="img-fluid" alt="" srcset="">
+                          </span>
+                        <p class="tx-14 mb-0 tx-placeholder tx-medium d-flex align-items-center">Inactive QRs</p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <p class="tx-32 mb-0 tx-bold">3</p>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+            </div>
+              
+
+          <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-3">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <div class="d-flex">
+                        <span class="image-box pd-10 mg-r-10">
+                          <img src="./assets/img/section.png" class="img-fluid" alt="" srcset="">
+                        </span>
+                      <p class="tx-14 mb-0 tx-placeholder tx-medium">Business Locations</p>
+                    </div>
+                  </div>
+                  <div class="">
+                    <p class="tx-32 mb-0 tx-bold">3</p>
+                  </div>
+                  
+                </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-3">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <div class="d-flex">
+                        <span class="image-box pd-10 mg-r-10">
+                          <img src="./assets/img/section.png" class="img-fluid" alt="" srcset="">
+                        </span>
+                      <div>
+                       <p class="tx-14 mb-0 tx-placeholder tx-medium">Completed Transactions</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <p class="tx-32 mb-0 tx-bold">13</p>
+                  </div>
+                  
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="mg-md-b-30 mg-md-t-40 my-20">
+          <p class="tx-18 tx-bold tx-blackk">Reports</p>
+          <hr class="mg-y-10">
+        </div>
+           <div class="row">
+            <div class="col-sm-12 col-lg-5 col-xl-5">
+              <div class="card h-100">
+                <div class="card-header bd-b-0">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                        <p class="tx-16 tx-bold mg-b-0">ANALYTICS</p>
+                    </div>
+                    <div class="col-md-6 col-12 ">
+                      <p class="tx-14 tx-medium mg-b-0 tx-right tx-grey">TOTAL SALES</p>
+                      <p class="tx-14 tx-bold mg-b-0 tx-right">#820,000.00</p>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="chart-thirteen"><canvas id="chartDonut2" class="chartDo"></canvas></div>
+                </div> 
+                <div class="card-footer footer-gray pd-20 bd-t-0">
+                  <div class="table-responsive">
+                    <table class="table table-borderless brand">
+                      <thead class="tx-16 tx-bold tx-uppercase">
+                        <tr class="">
+                          <th scope="col" class="tx-bold">PAN TYPE</th>
+                          <th scope="col">TRANS. vALUE</th>
+                          <th scope="col">Count</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="d-flex">
+                            <div class="ht-20 wd-20 rounded bg-yellow-light mg-r-5"></div>
+                            <img src="./assets/img/visa.png" class="img-fluid brand-img" alt="" srcset="">
+                          </div>
+                        </td>
+                          <td>#240,500.00</td>
+                          <td>476</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex">
+                              <div class="ht-20 wd-20 rounded bg-brownish mg-r-5"></div>
+                              <img src="./assets/img/master.png" class="img-fluid ht-25 wd-30" alt="" srcset="">
+                            </div>
+                          </td>
+                          <td>#240,500.00</td>
+                          <td>476</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex">
+                              <div class="ht-20 wd-20 rounded bg-orange-light mg-r-5"></div>
+                              <img src="./assets/img/nibss-logo 2.png" class="img-fluid ht-25" alt="" srcset="">
+                            </div>
+                          </td>
+                          <td>#240,500.00</td>
+                          <td>476</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </div>
+                </div><!-- card-footer -->
+              </div>
+             <div class="col-lg-7 col-12 mg-t-20 mg-lg-t-0 ">
+               <div class="card card-body h-100">
+                 <p class="tx-bold">TOP SELLING PRODUCTS</p>
+                <table class="table display">
+                  <thead class="table-head tx-placeholder">
+                    <tr>
+                      <th scope="col">ITEM NAME</th>
+                      <th scope="col">QUANTITY SOLD</th>
+                      <th scope="col">AMOUNT GENERATED</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                    <tr>
+                      <td>Item Name goes here</td>
+                      <td>1274</span></td>
+                      <td># 24,500.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+               </div>     
+             </div>
+           </div>
+
+           </div>
+ 
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../../assets/lib/chart.js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script>
+     
+      //date picker
+      var start = moment().subtract(29, 'days');
+      var end = moment();
+  
+      function cb(start, end) {
+          $('#reportrange span').html(start.format('MMMM D') + ' - ' + end.format('MMMM D'));
+      }
+  
+      $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+      }, cb);
+  
+      cb(start, end);
+    
+      </script>
+      
+      <script>
+   
+          /** PIE CHART 2 **/
+          var datapie2 = {
+            labels: ['Visa', 'Master Card', 'NIBSS'],
+            datasets: [{
+              data: [50,28,22],
+              backgroundColor: ['#FFDCA3', '#B87100' ,'#FBB037']
+            }]
+          };
+  
+          var optionpie2 = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+  
+          // For a pie chart
+          var ctx2 = document.getElementById('chartDonut2');
+          var myDonutChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: datapie2,
+            options: optionpie2
+          });
+      </script>
+
+    <script>
+      $(document).ready( function () {
+    $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    // "aoColumnDefs": [{
+    //     "bSortable": false,
+    //     "aTargets": [-1]
+    // }],
+    "searching": false,
+      "lengthChange": false,
+    "bInfo": true,
+    'stripeClasses': []
+    });
+      });
+    </script>
+
+  
+  </body>
+</html>
