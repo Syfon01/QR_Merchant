@@ -207,7 +207,7 @@
                 <div class="card-body">
                     <div class="chart-thirteen"><canvas id="chartDonut2" class="chartDo"></canvas></div>
                 </div> 
-                <div class="card-footer footer-gray pd-20 bd-t-0">
+                <div class="card-footer footer-gray pd-x-20 pd-b-0 bd-t-0">
                   <div class="table-responsive">
                     <table class="table table-borderless brand">
                       <thead class="tx-16 tx-bold tx-uppercase">
@@ -267,26 +267,6 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr>
-                      <td>Item Name goes here</td>
-                      <td>1274</span></td>
-                      <td># 24,500.00</td>
-                    </tr>
-                    <tr>
-                      <td>Item Name goes here</td>
-                      <td>1274</span></td>
-                      <td># 24,500.00</td>
-                    </tr>
-                    <tr>
-                      <td>Item Name goes here</td>
-                      <td>1274</span></td>
-                      <td># 24,500.00</td>
-                    </tr>
-                    <tr>
-                      <td>Item Name goes here</td>
-                      <td>1274</span></td>
-                      <td># 24,500.00</td>
-                    </tr>
                     <tr>
                       <td>Item Name goes here</td>
                       <td>1274</span></td>
@@ -425,8 +405,8 @@
     <script>
       $(document).ready( function () {
     $('.display').DataTable({
-    "paging": true,
-    "info": true,
+    "paging": false,
+    "info": false,
     "responsive": true,
     // "aoColumnDefs": [{
     //     "bSortable": false,
@@ -434,7 +414,7 @@
     // }],
     "searching": false,
       "lengthChange": false,
-    "bInfo": true,
+    "bInfo": false,
     'stripeClasses': []
     });
       });
