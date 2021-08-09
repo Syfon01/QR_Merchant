@@ -132,7 +132,7 @@
                   </tr>
                 </thead>
                 <tbody class="table-body">
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -149,7 +149,7 @@
                       <p class="tx-12 mb-0 pd-t-5">41.161.58.185</p>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -166,7 +166,7 @@
                       <p class="tx-12 mb-0 pd-t-5">41.161.58.185</p>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -183,7 +183,7 @@
                       <p class="tx-12 mb-0 pd-t-5">41.161.58.185</p>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -200,7 +200,7 @@
                       <p class="tx-12 mb-0 pd-t-5">41.161.58.185</p>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -217,7 +217,7 @@
                       <p class="tx-12 mb-0 pd-t-5">41.161.58.185</p>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#userActivity">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -239,7 +239,55 @@
               </div>
             </div>
           </div>
-               
+
+            <!-- user Activity modal  -->
+            <div class="modal fade" id="userActivity" tabindex="-1" aria-labelledby="userActivityModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-20 pd-b-10 bd-b">
+                    <div>
+                      <p class="tx-20 tx-semibold mg-b-0 tx-heading">User Activity Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-5">
+                          <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">username</label>
+                          <p class="tx-16 mb-0 tx-semibold">Kosiso Maduchukwu</p>
+                        </div>
+                        <div class="form-group col-md-7">
+                          <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">email address</label>
+                          <p class="tx-16 mb-0 tx-semibold">kosisoMaduchukwu@gmail.com</p>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-5">
+                          <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">role</label>
+                          <p class="tx-16 mb-0 tx-semibold">Admin</p>
+                        </div>
+                        <div class="form-group col-md-7">
+                          <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">ip address</label>
+                          <p class="tx-16 mb-0 tx-semibold">41.161.58.185</p>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">date</label>
+                          <p class="tx-16 mb-0 tx-semibold">Mar. 4, 2021 | 09:26am</p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>               
            </div>
  
       </div>
