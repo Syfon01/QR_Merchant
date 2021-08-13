@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>QR Manager</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed tx-center">
+      <div class="aside-header aside-top bg-black">
+        <a href="./index.html" class="aside-logo d-inlineblock tx-white tx-center tx-20">QRManager</a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body pd-0">
+        <div class="aside-loggedin bg-aside pd-x-20 pd-y-15">
+          <div class="d-flex align-items-center justify-content-start">
+            <div class="avatar ht-40 wd-40"><img src="../assets/img/avatar.png" class="rounded-circle" alt=""></div>
+            <div class="aside-loggedin-user mg-l-7 mg-t-0">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-0" data-toggle="collapse">
+                <p class="tx-bold mg-b-0 tx-14 tx-blackk">Peter Madukuve</p>
+                <div>
+                <i data-feather="chevron-down" class="mg-l-15"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 tx-subdued tx-left">Regional Manager</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside pd-x-25">
+          <li class="nav-item active"><a href="./dashboard.html" class="nav-link active text-gray-700"><i data-feather="pie-chart"></i><span>Dashboard</span></a></li>
+          <li class="nav-item"><a href="./merchant.html" class="nav-link text-gray-700"><i data-feather="grid"></i><span>Merchants</span> </a></li>
+          <li class="nav-item"><a href="" class="nav-link tx-muted"><i data-feather="layers" ></i> <span>Reports</span></a></li>
+          <li class="nav-item"><a href="./logout.html" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Logout</span></a></li>
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Dashboard</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <button class="btn tx-blackk tx-semibold mg-b-15 pd-l-0" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
+          <p class="tx-32 tx-bold tx-blackk">Business Locations</p>
+          <div class="row ">
+            <div class="col-lg-7 col-md-8 col-12 mg-b-30">
+              <div class="d-flex">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text bg-white" id="basic-addon1">
+                      <i data-feather="search" class="wd-20 ht-20"></i>
+                    </span>
+                  </div>
+                  <input type="search" class="form-control bd-l-0" placeholder="Search for locations">
+                </div>
+                <div class="mg-l-15">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-gray-50" id="basic-addon1"><img src="../assets/img/sort.svg" alt=""></span>
+                    </div>
+                    <select class="custom-select bg-gray-50 bd-l-0">
+                      <option selected>Filter</option>
+                      <option value="1">name</option>
+                      <option value="2">email address</option>
+                      <option value="3">region</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-4 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-header pd-y-10">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <label for="" class="mb-0 tx-secondary tx-12 tx-medium">Region</label>
+                      <p class="tx-24 tx-bold mb-0">Lagos 1</p>
+                    </div>
+                    <div>
+                      <label for="" class="mb-0 tx-secondary tx-12 tx-medium">No. of Merchants</label>
+                      <p class="tx-24 tx-bold mb-0">300</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="./view-region.html" class="btn btn-primary tx-semibold pd-x-20">View Region</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-4 mg-t-20">
+            <div class="card shadow-sm">
+              <div class="card-header pd-y-10">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <label for="" class="mb-0 tx-secondary tx-12 tx-medium">Region</label>
+                    <p class="tx-24 tx-bold mb-0">Lagos 2</p>
+                  </div>
+                  <div>
+                    <label for="" class="mb-0 tx-secondary tx-12 tx-medium">No. of Merchants</label>
+                    <p class="tx-24 tx-bold mb-0">300</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <a href="./view-region.html" class="btn btn-primary tx-semibold pd-x-20">View Region</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0 col-lg-4 mg-t-20">
+          <div class="card shadow-sm">
+            <div class="card-header pd-y-10">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <label for="" class="mb-0 tx-secondary tx-12 tx-medium">Region</label>
+                  <p class="tx-24 tx-bold mb-0">Lagos 3</p>
+                </div>
+                <div>
+                  <label for="" class="mb-0 tx-secondary tx-12 tx-medium">No. of Merchants</label>
+                  <p class="tx-24 tx-bold mb-0">300</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="./view-region.html" class="btn btn-primary tx-semibold pd-x-20">View Region</a>
+            </div>
+        </div>
+      </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script>
+      function goBack() {
+        window.history.back();
+        };
+    </script>
+  
+     
+    <script>
+      $(document).ready( function () {
+    $('.display').DataTable({
+    "paging": false,
+    "info": false,
+    "responsive": true,
+    // "aoColumnDefs": [{
+    //     "bSortable": false,
+    //     "aTargets": [-1]
+    // }],
+    "searching": false,
+      "lengthChange": false,
+    "bInfo": false,
+    'stripeClasses': []
+    });
+      });
+    </script>
+
+  
+  </body>
+</html>
