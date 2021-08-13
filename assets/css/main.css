@@ -22,6 +22,9 @@ body{
 .logo-grey{
   color: #C4C4C4;
 }
+.bg-gray-50{
+  background-color: #F9FAFB;
+}
 .dark-grey{
   color: #909090;
 }
