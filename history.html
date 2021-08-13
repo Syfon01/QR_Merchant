@@ -135,7 +135,7 @@
                   </tr>
                 </thead>
                 <tbody class="table-body">
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -163,7 +163,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -191,7 +191,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -219,7 +219,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -247,7 +247,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -275,7 +275,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="clickable-row" data-toggle="modal" data-target="#transactionHistory">
                     <td>
                       <div>
                         <p class="tx-12 mb-0">Mar 4, 2021</p>
@@ -308,8 +308,121 @@
               </div>
             </div>
           </div>
-               
            </div>
+
+           <!-- user Activity modal  -->
+           <div class="modal fade" id="transactionHistory" tabindex="-1" aria-labelledby="transactionHistoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header pd-t-20 pd-b-10 bd-b">
+                  <div>
+                    <p class="tx-20 tx-semibold mg-b-0 tx-heading">Transaction Details</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <form>
+                    <div class="form-row justify-content-between">
+                      <div class="col-md-7">
+                        <div class="row row-sm">
+                          <div class="col-4 form-group">
+                            <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">Transaction ID</label>
+                            <p class="tx-16 mb-0 tx-semibold">ME-#123457n</p>
+                          </div>
+                          <div class="col-8 form-group">
+                            <label for="formGroupExampleInput" class="d-block tx-12 tx-medium mg-b-3 tx-uppercase tx-grey-600">Customer name</label>
+                            <p class="tx-16 mb-0 tx-semibold">Chikeludebelum Emmanuel</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="form-group col-md-3">
+                        <p class="tx-md-right mg-md-t-10">
+                          <span class="badge tx-green-500 bg-green-50 tx-11 tx-uppercase tx-semibold mg-t-5">PAyment confirmed</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group col-md-8">
+                        <div class="card card-body pd-0 bd-t-0 secondary-bg">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Item Summary</th>
+                                  <th scope="col" class="tx-grey-600 tx-normal tx-right">Quantity</th>
+                                  <th scope="col" class="tx-grey-600">Item Price</th>
+                                  <th scope="col" class="tx-grey-600">Total Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div>
+                                      <p class="tx-12 mb-0">Name of Item something</p>
+                                        <label for="" class="tx-11 mb-0 tx-grey"> SKU: 2152AG56y</label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <p class="tx-12 mb-0 pd-t-5 tx-grey-600 tx-right">3</p>
+                                  </td>
+                                  <td>
+                                    <p class="tx-12 mb-0 pd-t-5 tx-grey-600">#2,100.00</p>
+                                  </td>
+                                  <td>
+                                    <p class="tx-12 mb-0 pd-t-5 tx-grey-600">#215,00.00</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="form-group col-md-4"> 
+                        <div class="card secondary-bg mg-b-15">
+                          <div class="card-header pd-x-15 pd-t-10 pd-b-0 bd-b-0">
+                            <p class="tx-14 mb-0 tx-semibold">Order Summary</p>
+                          </div>
+                          <div class="card-body pd-y-10 pd-x-15">
+                            <div class="d-flex justify-content-between mg-b-10">
+                              <p class="mb-0 tx-gray-card tx-11">Order Created</p>
+                              <p class="mb-0 tx-right tx-12 tx-medium">Tue, Jan 9, 2023</p>
+                            </div>
+                            <div class="d-flex justify-content-between mg-b-10">
+                              <p class="mb-0 tx-gray-card tx-11">Subtotal</p>
+                              <p class="mb-0 tx-right tx-12 tx-medium">#115,300.00</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <p class="mb-0 tx-gray-card tx-11">Shipping Price</p>
+                              <p class="mb-0 tx-right tx-12 tx-medium">#23,000</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card secondary-bg mg-b-15">
+                          <div class="card-body pd-y-10 pd-x-15">
+                            <div class="d-flex justify-content-between">
+                              <p class="mb-0 tx-gray-card tx-11">Total</p>
+                              <p class="mb-0 tx-right tx-14 tx-semibold">#115,300.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal">Generate Report</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
  
       </div>
     </div>

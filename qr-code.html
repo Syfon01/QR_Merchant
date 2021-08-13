@@ -124,7 +124,7 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -153,7 +153,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -182,7 +182,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -211,7 +211,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -240,7 +240,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -289,7 +289,7 @@
                     </tr>
                   </thead>
                   <tbody class="table-body">
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -318,7 +318,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -347,7 +347,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -376,7 +376,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR"> 
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -405,7 +405,7 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row" data-toggle="modal" data-target="#selectQR">
                       <td>
                         <div class="d-flex">
                           <img src="./assets/img/QR.png" class="img-fluid wd-30 ht-30 mg-r-8" alt="" srcset="">
@@ -442,6 +442,217 @@
           </div>
                
            </div>
+
+            <!-- select QRmodal  -->
+          <div class="modal fade" id="selectQR" tabindex="-1" aria-labelledby="selectQRLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-20 pd-b-10 bd-b">
+                  <div>
+                    <p class="tx-20 tx-semibold mg-b-0 tx-heading">Select QR Type</p>
+                  <p class="tx-12 tx-secondary mb-0">Kindly select the type of QR you want to generate</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <form>
+                    <div class="form-group">
+                      <div class="card card-body pd-15">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input chb" id="staticQR">
+                          <label class="custom-control-label tx-16" for="staticQR">Static QR Generate</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="card card-body pd-15">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input chb" id="dynamicQR">
+                          <label class="custom-control-label tx-16" for="dynamicQR">Dynamic QR Generate</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal">Close</button>
+                  <button  class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal" type="button" data-toggle="modal" data-target="#previewQR">Generate QR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+             <!-- Preview QRmodal  -->
+             <div class="modal fade" id="previewQR" tabindex="-1" aria-labelledby="previewQRLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-20 pd-b-10 bd-b">
+                    <div>
+                      <p class="tx-20 tx-semibold mg-b-0 tx-heading">Static Universal QR Code</p>
+                    <p class="tx-12 tx-secondary mb-0">Preview of the static code you generated</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20 pd-b-50">
+                    <form class="tx-center">
+                      <img src="./assets/img/code.png" class="img-fluid" alt="">
+                    </form>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal" data-toggle="modal" data-target="#shareQR">Share QR</button>
+                    <button  class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal" type="button">Download QR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!-- share QRmodal  -->
+             <div class="modal fade" id="shareQR" tabindex="-1" aria-labelledby="shareQRLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-20 pd-b-10 bd-b">
+                    <div>
+                      <p class="tx-20 tx-semibold mg-b-0 tx-heading">Share QR Code</p>
+                    <p class="tx-12 tx-secondary mb-0">Select any mode to share your QR</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20 pd-b-50">
+                    <ul class="nav nav-tabs bd-b-0 mg-b-20" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active cat" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="./assets/img/u_envelopes.svg" alt="icona" class="mg-r-10" srcset=""> Email</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link cat" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"> <img src="./assets/img/u_calling.svg" alt="icona" class="mg-r-10" srcset=""> Phone Number</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link cat" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><img src="./assets/img/u_link-alt.svg" alt="icona" class="mg-r-10" srcset=""> URL</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content pd-y-20 pd-x-0" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="" method="post">
+                          <div class="form-row">
+                            <div class="form-group col-md-8 col-4">
+                              <label for="inputEmail4" class="mg-b-3 tx-medium tx-12">Email Address</label>
+                              <input type="email" class="form-control" id="inputEmail4" placeholder="- Enter here - ">
+                            </div>
+                            <div class="form-group col-md-4 col-4">
+                              <button class="btn btn-outlined-primary tx-12 tx-semibold w-100 mg-t-25 pd-y-9" type="button" data-toggle="modal" data-target="#createBusiness">
+                                <i class="fa fa-plus tx-12 mg-r-5"></i>
+                                Add Email
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form action="" method="post">
+                          <div class="form-row">
+                            <div class="form-group col-md-8 col-4">
+                              <label for="inputEmail4" class="mg-b-3 tx-medium tx-12">Phone Number</label>
+                              <input type="email" class="form-control" id="inputEmail4" placeholder="- Enter here - ">
+                            </div>
+                            <div class="form-group col-md-4 col-4">
+                              <button class="btn btn-outlined-primary tx-12 tx-semibold w-100 mg-t-25 pd-y-9" type="button" data-toggle="modal" data-target="#createBusiness">
+                                <i class="fa fa-plus tx-12 mg-r-5"></i>
+                                Add Number
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <form action="" method="post">
+                          <div class="form-row">
+                            <div class="form-group col-md-8 col-4">
+                              <label for="inputEmail4" class="mg-b-3 tx-medium tx-12">URL Link</label>
+                              <input type="email" class="form-control" id="inputEmail4" placeholder=" https://dribbble.com/tags/add_email?s=latest">
+                            </div>
+                            <div class="form-group col-md-4 col-4">
+                              <button class="btn btn-primary tx-12 tx-semibold w-100 mg-t-25 pd-y-9" type="button" data-toggle="modal" data-target="#createBusiness">
+                                Copy URL
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal" >Cancel</button>
+                    <button  class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-dismiss="modal" type="button" data-toggle="modal" data-target="#successModal">Share QR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--success  Modal -->
+          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="./assets/img/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-10">
+                      <p class="tx-22 tx-bold mb-0 mg-t-20">QR Shared Successfully</p>
+                    </div>
+                  </div>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14">You’ve successfully shared the QR Code generated </p>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-15 tx-semibold" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+             <!--error  Modal -->
+             <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-10 bd-b-0">
+                    <h5 class="modal-title"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex">
+                      <div>
+                        <img src="./assets/img/Cancel.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                      </div>
+                      <div class="mg-l-10">
+                        <p class="tx-22 tx-bold mb-0 mg-t-20">Static QR Generation Failed</p>
+                      </div>
+                    </div>
+                    <hr class="mg-t-10"/>
+                    <p class="tx-14">The static QR generation failed, kindly try again </p>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-15 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+
  
       </div>
     </div>
@@ -487,7 +698,13 @@
        $(this).DataTable().columns.adjust().responsive.recalc();
      });
    });
+
+   $(".chb").change(function()
+      {
+          $(".chb").prop('checked',false);
+          $(this).prop('checked',true);
       });
+    });
     </script>
 
   

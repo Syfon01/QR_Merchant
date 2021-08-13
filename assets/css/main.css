@@ -11,6 +11,9 @@ body{
 .tx-blackk{
   color: #12263F;
 }
+.tx-secondary{
+  color: #6A737D;
+}
 .login-main{
   background: linear-gradient(116.45deg, rgba(0, 0, 0, 0.0639) 3.28%, rgba(0, 0, 0, 0.5396) 66.61%),url(../img/login-bg.png);
   background-size: cover;
@@ -25,6 +28,9 @@ body{
 .tx-grey{
   color: #737F8D;
 }
+.tx-grey-600{
+  color:#4B5563 ;
+}
 .control-height{
   height: 90vh;
 }
@@ -35,7 +41,7 @@ body{
   background-color:#E9EDF3!important ;
 }
 .secondary-bg{
-  background-color: #F9FAFC;
+  background-color: #F9FAFC!important;
 }
 .image-box{
   background: rgba(243, 244, 246, 1);
@@ -170,3 +176,23 @@ font-size: 12px!important;
     box-sizing: border-box;
     box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
    }
+   .nav-tabs .nav-link.cat{
+    border: 1px solid#DADFE4;
+    border-radius: 5px;
+
+  }
+  .nav-tabs .nav-link.cat.active{
+  background-color: #F5DDDD!important;
+  color: #D70900!important;
+  border: 1px solid #F6ADAD;
+  font-weight: 600;
+  }
+  .nav-tabs .nav-link.cat{
+    color: #6A737D;
+    background-color: #F2F5F9;
+  }
+  .nav-tabs .nav-link.cat.active img{
+fill: #d70900!important;
+-webkit-filter: invert(40%) grayscale(200%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(800%) contrast(2);
+
+    }
