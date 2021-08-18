@@ -34,8 +34,14 @@ body{
 .tx-grey{
   color: #737F8D;
 }
+.tx-grey-500{
+  color: #6B7280;
+}
 .tx-grey-600{
   color:#4B5563 ;
+}
+.tx-grey-900{
+  color: #111827;
 }
 .control-height{
   height: 90vh;
@@ -116,6 +122,9 @@ font-size: 12px!important;
   }
   .bg-green-50{
     background-color: #E3FCEF;
+  }
+  .bg-gray{
+    background-color: #FAFBFC;
   }
   .tx-green-500{
     color: #006644;
