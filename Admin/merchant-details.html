@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>QR Manager</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed tx-center">
+      <div class="aside-header aside-top bg-black">
+        <a href="./index.html" class="aside-logo d-inlineblock tx-white tx-center tx-20">QRManager</a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body pd-0">
+        <div class="aside-loggedin bg-aside pd-x-20 pd-y-15">
+          <div class="d-flex align-items-center justify-content-start">
+            <div class="avatar ht-40 wd-40"><img src="../assets/img/avatar.png" class="rounded-circle" alt=""></div>
+            <div class="aside-loggedin-user mg-l-7 mg-t-0">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-0" data-toggle="collapse">
+                <p class="tx-bold mg-b-0 tx-14 tx-blackk">Peter Madukuve</p>
+                <div>
+                <i data-feather="chevron-down" class="mg-l-15"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 tx-subdued tx-left">Merchant</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside pd-x-25">
+          <li class="nav-item"><a href="./dashboard.html" class="nav-link active text-gray-700"><i data-feather="pie-chart"></i><span>Dashboard</span></a></li>
+          <li class="nav-item"><a href="./qrcode.html" class="nav-link"><i data-feather="layers" ></i> <span>QR Codes</span></a></li>
+          <li class="nav-item active"><a href="./merchant.html" class="nav-link text-gray-700"><i data-feather="grid"></i><span>Merchants</span> </a></li>
+          <li class="nav-item"><a href="./logout.html" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Logout</span></a></li>
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Merchant</a></li>
+            </ol>
+          </nav>
+          <div>
+            <button class="btn btn-primary">Generate QR</button>
+            <span class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+              <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+                <i data-feather="bell"></i>
+                <span>2</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header">Notifications</div>
+                <a href="" class="dropdown-item">
+                  <div class="media">
+                    <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                    <div class="media-body mg-l-15">
+                      <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                      <span>Mar 15 12:32pm</span>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="" class="dropdown-item">
+                  <div class="media">
+                    <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                    <div class="media-body mg-l-15">
+                      <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                      <span>Mar 12 10:40pm</span>
+                    </div>
+                  </div>
+                </a>
+                <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+              </div><!-- dropdown-menu -->
+            </span>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-4" href="/staff/New.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+
+     
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <button class="btn tx-blackk tx-semibold mg-b-5 pd-l-0" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go Back</button>
+          <div class="row justify-content-between">
+            <div class="col-md-7">
+            <p class="tx-32 tx-bold tx-blackk">Merchant Details</p>
+            </div>
+            <div class="col-md-5 mg-t-20 mg-md-t-0">
+              <!-- <div class="d-flex float-md-right">
+                <a href="./upload-merchant.html" class="btn btn-outlined-primary tx-14 tx-semibold mg-r-20" type="button">
+                  <i class="fa fa-plus tx-12 mg-r-5"></i>
+                  Upload Merchants
+                </a>
+                <a href="./create-merchant.html" class="btn btn-outlined-primary tx-14 tx-semibold" type="button">
+                  <i class="fa fa-plus tx-12 mg-r-5"></i>
+                  Create Merchant
+                </a>
+              </div> -->
+            </div>
+          </div>
+          <div class="card card-body mg-b-30">
+            <div class="row justify-content-between">
+              <div class="col-md-7">
+                <div class="d-flex">
+                  <div>
+                  <div class="avatar avatar-md"><img src="../assets/img/avatar.png" class="rounded-circle" alt=""></div>
+                  </div>
+                  <div class="mg-l-15">
+                    <p class="tx-18 tx-medium mg-b-0 tx-blackk">Aliyu Mohammed</p>
+                    <p class="tx-secondary">aliyumohammed@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 mg-t-10">
+                <a href="./assign-pan.html" class="btn btn-primary w-100">Assign PAN </a>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-line" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#rec-home" role="tab" aria-controls="home" aria-selected="true">Transactions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pd-x-20" id="home-tab" data-toggle="tab" href="#inactive" role="tab" aria-controls="home" aria-selected="true">User Activity</a>
+            </li>
+            
+          </ul>   
+          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+            <div class="tab-pane fade show active" id="rec-home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="table-section">
+                <div class="card card-body h-100 p-15">
+                  <div class="card-header pd-x-0 pd-y-10">
+                    <div class="row justify-content-between">
+                      <div class="col-lg-5 col-md-7 col-12">
+                        <div class="d-flex">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text bg-white" id="basic-addon1">
+                                <i data-feather="search" class="wd-20 ht-20"></i>
+                              </span>
+                            </div>
+                            <input type="search" class="form-control bd-l-0" placeholder="Search">
+                          </div>
+                          <div class="mg-l-15">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-gray-50" id="basic-addon1"><img src="../assets/img//filter_list.svg" alt=""></span>
+                              </div>
+                              <select class="custom-select bg-gray-50 bd-l-0">
+                                <option selected>Filter</option>
+                                <option value="1">name</option>
+                                <option value="2">email address</option>
+                                <option value="3">region</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-3">
+                        <div class="d-flex justify-content-end">
+                          <button class="btn pd-0 mb-0 bd bg-gray-50 pd-x-10 pd-y-5">
+                            <span class="tx-grey">
+                              <img src="../assets/img/export.svg" alt="" srcset="">
+                              Export file
+                            </span>
+                          </button>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                <table class="table display">
+                  <thead class="table-head tx-placeholder tx-uppercase">
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">transaction id</th>
+                      <th scope="col">Customer name</th>
+                      <th scope="col">payment mode</th>
+                      <th scope="col">amount</th>
+                      <th scope="col">status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td colspan="6">
+                        <div class="col-md-6 col-lg-5 col-xl-5 pd-md-x-10 tx-center mx-auto pd-y-70">
+                          <img src="../assets/img/nouser.png" class="img-fluid " alt="" srcset="">
+                          <p class="tx-14 tx-medium mg-t-20 tx-blackk mg-b-10">No processed transactions yet.</p>
+                          <p class="tx-12 mb-0 tx-gray-card col-md-8 mx-auto">Details appear here when merchants start processing</p>
+                         
+                        </div>
+  
+                      </td>
+                      
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="inactive" role="tabpanel" aria-labelledby="home-tab">
+              <div class="table-section">
+                <div class="card card-body h-100 p-15">
+                  <div class="card-header pd-x-0 pd-y-10">
+                    <div class="row justify-content-between">
+                      <div class="col-lg-5 col-md-7 col-12">
+                        <div class="d-flex">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text bg-white" id="basic-addon1">
+                                <i data-feather="search" class="wd-20 ht-20"></i>
+                              </span>
+                            </div>
+                            <input type="search" class="form-control bd-l-0" placeholder="Search">
+                          </div>
+                          <div class="mg-l-15">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text bg-gray-50" id="basic-addon1"><img src="../assets/img//filter_list.svg" alt=""></span>
+                              </div>
+                              <select class="custom-select bg-gray-50 bd-l-0">
+                                <option selected>Filter</option>
+                                <option value="1">name</option>
+                                <option value="2">email address</option>
+                                <option value="3">region</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-3">
+                        <div class="d-flex justify-content-end">
+                          <button class="btn pd-0 mb-0 bd bg-gray-50 pd-x-10 pd-y-5">
+                            <span class="tx-grey">
+                              <img src="../assets/img/export.svg" alt="" srcset="">
+                              Export file
+                            </span>
+                          </button>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                <table class="table display">
+                  <thead class="table-head tx-placeholder tx-uppercase">
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">transaction id</th>
+                      <th scope="col">Customer name</th>
+                      <th scope="col">payment mode</th>
+                      <th scope="col">amount</th>
+                      <th scope="col">status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                    <tr>
+                      <td colspan="6">
+                        <div class="col-md-6 col-lg-5 col-xl-5 pd-md-x-10 tx-center mx-auto pd-y-70">
+                          <img src="../assets/img/nouser.png" class="img-fluid " alt="" srcset="">
+                          <p class="tx-14 tx-medium mg-t-20 tx-blackk mg-b-10">No processed transactions yet.</p>
+                          <p class="tx-12 mb-0 tx-gray-card col-md-8 mx-auto">Details appear here when merchants start processing</p>
+                         
+                        </div>
+  
+                      </td>
+                      
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          </div>
+           </div>
+
+       
+ 
+      </div>
+    </div>
+
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready( function () {
+    $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    // "aoColumnDefs": [{
+    //     "bSortable": false,
+    //     "aTargets": [-1]
+    // }],
+    "searching": false,
+      "lengthChange": false,
+    "bInfo": true,
+    'stripeClasses': []
+    });
+     
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+
+      });
+    </script>
+    <script>
+      function goBack() {
+        window.history.back();
+        };
+    </script>
+
+  
+  </body>
+</html>

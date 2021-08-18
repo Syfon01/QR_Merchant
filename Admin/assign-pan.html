@@ -44,15 +44,15 @@
       <div class="aside-body pd-0">
         <div class="aside-loggedin bg-aside pd-x-20 pd-y-15">
           <div class="d-flex align-items-center justify-content-start">
-            <div class="avatar ht-40 wd-40"><img src="../assets/img/admin.png" class="rounded-circle" alt=""></div>
+            <div class="avatar ht-40 wd-40"><img src="../assets/img/avatar.png" class="rounded-circle" alt=""></div>
             <div class="aside-loggedin-user mg-l-7 mg-t-0">
               <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-0" data-toggle="collapse">
-                <p class="tx-bold mg-b-0 tx-14 tx-blackk">Jane Madu</p>
+                <p class="tx-bold mg-b-0 tx-14 tx-blackk">Peter Madukuve</p>
                 <div>
                 <i data-feather="chevron-down" class="mg-l-15"></i>
                 </div>
               </a>
-              <p class="tx-12 mg-b-0 tx-subdued tx-left">Back-Office Admin</p>
+              <p class="tx-12 mg-b-0 tx-subdued tx-left">Merchant</p>
             </div>
           </div>
           
@@ -82,7 +82,7 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Merchant</a></li>
             </ol>
           </nav>
           <div>
@@ -121,88 +121,106 @@
         </div>
       </div>
 
+
+     
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-        <div class="">
           <button class="btn tx-blackk tx-semibold mg-b-5 pd-l-0" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go Back</button>
-          <div class="">
-          <p class="tx-32 tx-bold tx-blackk mg-b-0">Create New Merchant</p>
-          <p class="tx-16 mg-b-0 tx-grey-500">Kindly input the detials of the merchant</p>
+          <div class="row justify-content-between">
+            <div class="col-md-7">
+            <p class="tx-32 tx-bold tx-blackk">Assign PAN</p>
+            </div>
+            <div class="col-md-5 mg-t-20 mg-md-t-0">
+              <!-- <div class="d-flex float-md-right">
+                <a href="./upload-merchant.html" class="btn btn-outlined-primary tx-14 tx-semibold mg-r-20" type="button">
+                  <i class="fa fa-plus tx-12 mg-r-5"></i>
+                  Upload Merchants
+                </a>
+                <a href="./create-merchant.html" class="btn btn-outlined-primary tx-14 tx-semibold" type="button">
+                  <i class="fa fa-plus tx-12 mg-r-5"></i>
+                  Create Merchant
+                </a>
+              </div> -->
+            </div>
           </div>
-        </div>
-
-        <form action="" method="post">
-          <div class="card card-body mg-t-30">
+          <div class="card card-body mg-b-30 pd-0">
             <div class="row">
-              <div class="form-group col-md-3">
-                <p class="tx-24 mb-0">Personal Information</p>
-              </div>
-              <div class="form-group col-md-9 row">
-                <div class="col-md-6 mg-b-10 mg-md-b-0">
-                  <label for="" class="tx-medium mb-0 tx-grey-900">Email Address</label>
-                  <input type="text" class="form-control bg-gray" placeholder="-Enter email address-">
-                </div>
-                <div class="col-md-6">
-                  <label for="" class="tx-medium mb-0 tx-grey-900">Phone Number</label>
-                  <input type="number" class="form-control bg-gray" placeholder="-Enter phone number-">
+              <div class="col-md-4 secondary-bg pd-y-20 pd-x-40">
+                <div class="d-flex">
+                  <div>
+                  <div class="avatar avatar-md"><img src="../assets/img/avatar.png" class="rounded-circle" alt=""></div>
+                  </div>
+                  <div class="mg-l-15">
+                    <p class="tx-18 tx-medium mg-b-0 tx-blackk">Aliyu Mohammed</p>
+                    <p class="tx-secondary mb-0">aliyumohammed@gmail.com</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <hr>
-            <div class="row mg-t-20">
-              <div class="form-group col-md-3">
-                <p class="tx-24 mb-0">Account Details</p>
-              </div>
-              <div class="form-group col-md-9 row">
-                <div class="col-md-6 mg-b-10 mg-md-b-0">
-                  <label for="" class="tx-medium mb-0 tx-grey-900">Account Number</label>
-                  <input type="number" class="form-control bg-gray" placeholder="-Enter account number-">
+              <div class="col-md-2 mg-t-10 mg-md-0 pd-20">
+                <div class="">
+                  <p class="tx-secondary mb-0">Account Number</p>
+                  <p class="tx-18 tx-medium mg-b-0 tx-blackk">0008723452</p>
                 </div>
-                <div class="col-md-6">
-                  <label for="" class="tx-medium mb-0 tx-grey-900">Account Name</label>
-                  <input type="text" class="form-control bg-gray" placeholder="-Account name-">
+              </div>
+              <div class="col-md-2 mg-t-10 mg-md-0 pd-20">
+                <div class="">
+                  <p class="tx-secondary mb-0">Business-ID</p>
+                  <p class="tx-18 tx-medium mg-b-0 tx-blackk">MER-24315</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer mg-t-30 bd-t-0 pd-x-0">
-            <button class="btn btn-outlined-primary tx-semibold mg-r-10" type="button">Clear Contents</button>
-            <button class="btn btn-primary tx-semibold pd-x-30" type="button" data-toggle="modal" data-target="#successModal">Create Merchant</button>
           </div>
 
-        </form>
-        
-        </div>
- 
-           <!--success  Modal -->
-           <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header pd-y-10 bd-b-0">
-                  <h5 class="modal-title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+          <form action="" method="post">
+            <div class="card card-body mg-t-30">
+              <div class="row">
+                <div class="form-group col-md-3">
+                  <p class="tx-24 mb-0">Business Details</p>
                 </div>
-                <div class="modal-body">
-                  <div class="d-flex">
-                    <div>
-                      <img src="../assets/img/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                    </div>
-                    <div class="mg-l-10">
-                      <p class="tx-22 tx-bold mb-0 mg-t-20">Merchant Created Successfully</p>
-                    </div>
+                <div class="form-group col-md-9 row">
+                  <div class="col-md-6 mg-b-10 mg-md-b-0">
+                    <label for="" class="tx-medium mb-0 tx-grey-900">Merchant Business Type</label>
+                    <input type="text" class="form-control bg-gray" placeholder="-Enter Merchant Business Type- ">
                   </div>
-                  <hr class="mg-t-10"/>
-                  <p class="tx-14">You’ve successfully created a merchant </p>
+                  <div class="col-md-6 mg-b-10 form-group">
+                    <label for="" class="tx-medium mb-0 tx-grey-900">Currency Code</label>
+                    <input type="number" class="form-control bg-gray" placeholder="-Enter Currency Code-">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="" class="tx-medium mb-0 tx-grey-900">Merchant Country</label>
+                    <input type="number" class="form-control bg-gray" placeholder="-Select Merchant Country-">
+                  </div>
                 </div>
-                <div class="modal-footer bg-modal-footer">
-                  <a href="./all-merchant.html" type="button" class="btn btn-outlined-primary btn-sm pd-x-15 tx-semibold">Go to Merchant List</a>
+              </div>
+              <hr>
+              <div class="row mg-t-20">
+                <div class="form-group col-md-3">
+                  <p class="tx-24 mb-0">Account Details</p>
+                </div>
+                <div class="form-group col-md-9 row">
+                  <div class="col-md-6 mg-b-10 mg-md-b-0">
+                    <label for="" class="tx-medium mb-0 tx-grey-900">Account Number</label>
+                    <input type="number" class="form-control bg-gray" placeholder="-Enter account number-">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="" class="tx-medium mb-0 tx-grey-900">Account Name</label>
+                    <input type="text" class="form-control bg-gray" placeholder="-Account name-">
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="modal-footer mg-t-30 bd-t-0 pd-x-0">
+              <button class="btn btn-outlined-primary tx-semibold mg-r-10" type="button">Clear Contents</button>
+              <button class="btn btn-primary tx-semibold pd-x-30" type="button" data-toggle="modal" data-target="#successModal">Create Merchant</button>
+            </div>
+  
+          </form>
+          
           </div>
-      
+           </div>
+
+       
+ 
       </div>
     </div>
 
@@ -222,10 +240,40 @@
     <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
 
     <script>
+      $(document).ready( function () {
+    $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    // "aoColumnDefs": [{
+    //     "bSortable": false,
+    //     "aTargets": [-1]
+    // }],
+    "searching": false,
+      "lengthChange": false,
+    "bInfo": true,
+    'stripeClasses': []
+    });
+     
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+
+      });
+    </script>
+    <script>
       function goBack() {
         window.history.back();
         };
     </script>
+
   
   </body>
 </html>
